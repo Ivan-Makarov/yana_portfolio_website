@@ -1,0 +1,80 @@
+@import "compass/reset";
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&subset=cyrillic');
+
+$transparent-black: rgba(0, 0, 0, 0.8);
+$transparent: rgba(0, 0, 0, 0);
+$blue: #4bcaff;
+$transparent-blue: rgba(75, 202, 255, 0.5);
+
+body {
+    font-family: "Fira Sans", Helvetica, Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    height: 100vh;
+    background: url('../img/skyscrapers.jpg') no-repeat;
+    background-size: cover;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 1000px;
+    &.nav-wrapper {
+        height: 100px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: $transparent-black;
+}
+
+.nav-logo {
+    a {
+        color: #ffffff;
+    }
+}
+
+.nav-menu {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu-item {
+    margin-left: 50px;
+    a {
+        color: #ffffff;
+        padding: 10px;
+        border: 2px solid $transparent;
+        &:hover {
+            color: $blue;
+            border: 2px solid $blue;
+        }
+    }
+}
+
+h1 {
+    padding: 30px;
+    font-size: 3em;
+    color: #ffffff;
+    background-color: $transparent-blue;
+}
