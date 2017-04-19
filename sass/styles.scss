@@ -30,12 +30,19 @@ a {
     margin: 0 auto;
     width: 1000px;
     &.nav-wrapper {
-        height: 100px;
         display: -webkit-flex;
         display: -ms-flex;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        &.nav_wide {
+            height: 100px;
+            transition: all 0.2s ease-in;
+        }
+        &.nav_narrow {
+            height: 40px;
+            transition: all 0.2s ease-in;
+        }
     }
 }
 
@@ -44,6 +51,15 @@ a {
     position: fixed;
     top: 0;
     background-color: $transparent-black;
+    &:hover {
+        .content-wrapper {
+            &.nav-wrapper {
+                &.nav_narrow {
+                    height: 100px;
+                }
+            }
+        }
+    }
 }
 
 .nav-logo {
