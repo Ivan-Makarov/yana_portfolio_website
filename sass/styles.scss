@@ -43,7 +43,7 @@ a {
             transition: all 0.2s ease-in;
         }
         &.nav_narrow {
-            height: 40px;
+            height: 45px;
             transition: all 0.2s ease-in;
         }
     }
@@ -55,15 +55,6 @@ a {
     top: 0;
     background-color: $transparent-black;
     z-index: 100;
-    &:hover {
-        .content-wrapper {
-            &.nav-wrapper {
-                &.nav_narrow {
-                    height: 100px;
-                }
-            }
-        }
-    }
 }
 
 .nav-logo {
@@ -152,7 +143,7 @@ section {
 }
 
 .contacts {
-    background-color: $blue;
+    background-color: #888888;
     color: #ffffff;
 }
 
@@ -195,12 +186,19 @@ section {
         transition: all 0.5s ease-out;
         box-shadow: 0 0 12px $semi-transparent;
     }
+    &.invalid {
+        border: 2px solid #ff0000;
+        color: #ff0000;
+    }
 }
 
 .form-box-label {
     margin-bottom: 0.5em;
     text-transform: uppercase;
     letter-spacing: 0.07em;
+    &.invalid-email {
+        color: #ff0000;
+    }
 }
 
 .input-one-line {
@@ -217,20 +215,25 @@ section {
 }
 
 .send-button {
-    width: 20%;
+    width: 30%;
     font-family: $main-font;
     line-height: 40px;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     font-weight: 400;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    background-color: $transparent;
     outline: none;
-    &:focus,
-    &:hover {
-        background-color: $semi-transparent;
-        cursor: pointer;
-        transition: all 0.3s ease-out;
+    &.inactive-button {
+        color: #eeeeee;
+        border: 2px solid #aaaaaa;
+        background-color: #aaaaaa;
     }
+    &.active-button {
+        border: 2px solid $blue;
+        background-color: $blue;
+        box-shadow: 0 0 12px $semi-transparent;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+        color: #ffffff;
+    }
+
 }
