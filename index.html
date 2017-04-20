@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Document</title>
     <script src="js/nav-animation.js" type="text/javascript" defer></script>
+    <script src="js/form.js" type="text/javascript" defer></script>
 </head>
 <body>
 
@@ -60,7 +61,7 @@
     </section>
     <section id="portfolio" class="portfolio">
         <div class="content-wrapper">
-            <h2></h2>
+            <h2>Portfolio</h2>
             <ul class="protfolio-projects">
                 <li></li>
                 <li></li>
@@ -76,13 +77,18 @@
     <section id="contacts" class="contacts">
         <div class="content-wrapper">
             <h2>contact me</h2>
-            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p> -->
-            <form class="contact-form" action="">
-                <input class="input-one-line form-box" type="text" name="" value="">
-                <input class="input-one-line form-box" type="email" name="" value="">
-                <textarea class="input-block form-box" name="name" rows="8" cols="80"></textarea>
-                <button class="send-button" type="submit" name="button">Send</button>
-            </form>
+            <div class="contacts-form-wrapper">
+                <p class="contacts-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id estLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do </p>
+                <form class="contacts-form" name="contacts_form" action="">
+                    <span class="form-box-label">name</span>
+                    <input class="input-one-line form-box" type="text" name="name" value="" required>
+                    <span class="form-box-label">email</span>
+                    <input class="input-one-line form-box" type="email" name="email" value="" required>
+                    <span class="form-box-label">message</span>
+                    <textarea class="input-block form-box" name="message" rows="8" cols="0" required></textarea>
+                    <button class="send-button" type="submit" name="send-button">Send</button>
+                </form>
+            </div>
         </div>
     </section>
 </body>
