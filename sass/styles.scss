@@ -136,6 +136,21 @@ section {
     line-height: 1.3em;
 }
 
+.portfolio-projects {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.portfolio-item {
+    height: 220px;
+    width: 22%;
+    background-color: $blue;
+    margin-bottom: 40px;
+}
+
 .contacts {
     background-color: $blue;
     color: #ffffff;
@@ -171,11 +186,14 @@ section {
     outline: none;
     &:focus {
         background-color: $semi-transparent;
+        transition: all 0.3s ease-out;
     }
     &.complete {
         border-radius: 5px;
         background-color: #ffffff;
         color: #000000;
+        transition: all 0.5s ease-out;
+        box-shadow: 0 0 12px $semi-transparent;
     }
 }
 
@@ -213,5 +231,6 @@ section {
     &:hover {
         background-color: $semi-transparent;
         cursor: pointer;
+        transition: all 0.3s ease-out;
     }
 }
